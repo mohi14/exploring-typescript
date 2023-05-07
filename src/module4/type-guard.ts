@@ -85,7 +85,6 @@ const animal11 = new Dog("Kutta", "dog") // instance-->dog
 const animal12 = new Cat("Bilai", "cat") // instance-->cat
 
 // class k amra type hishebe use korte pari
-
 function geAnimal(obj: Animal1) {
     if (obj instanceof Dog) {
         obj.makeBark()
