@@ -4,10 +4,10 @@
 // private use korte class er moddhe user korte parbe
 // protected use korle extended child use korte parbe and code er moddhe oshamanjossho toiri hote pare
 
-class BankAccount {
+class BankAccount1 {
     public readonly id: number;
     public name: string;
-    protected _balance: number;
+    private _balance: number;
     // private _balance: number;
 
     constructor(id: number, name: string, balance: number) {
@@ -16,22 +16,40 @@ class BankAccount {
         this._balance = balance;
     }
 
-    getBalance() {
-        console.log(`My Current Balance is ${this._balance}`);
+    // to access private property we use getter
+
+    // getter
+    get balance(): number {
+        return this._balance
     }
-    addDeposit(amount: number) {
+
+    // to set any value to a private property we use setter
+    // setter
+    set deposit(amount: number) {
+        this._balance = this._balance + amount
+    }
+
+
+    getBalance1(): number {
+        return this._balance;
+    }
+    addDeposit1(amount: number) {
         this._balance = this._balance + amount
     }
 }
 
-class StudentAccount extends BankAccount {
+class StudentAccount1 extends BankAccount1 {
     // by using test() we can test the parent class
     test() {
-        this._balance
+
     }
 }
 
-const myAccount = new BankAccount(444, "mohi", 500);
-myAccount.addDeposit(20);
-myAccount.getBalance()
-console.log(myAccount);
+const myAccount1 = new BankAccount1(444, "mohi", 500);
+
+console.log(myAccount1);
+
+
+myAccount1.deposit = 30
+console.log(myAccount1.getBalance1())
+console.log(myAccount1.balance)
