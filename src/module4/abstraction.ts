@@ -14,6 +14,7 @@ interface IVehicle {
     startEngine(): void
     stopEngine(): void
     move(): void
+    gg?(): void
 }
 
 class Vehicle implements IVehicle {
@@ -72,6 +73,7 @@ abstract class Vehiclee {
     move(): void {
         console.log("moving engine..");
     }
+
     test() {
         console.log("I am for testing purpose");
     }

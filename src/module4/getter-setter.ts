@@ -16,7 +16,17 @@ class BankAccount1 {
         this._balance = balance;
     }
 
-    // to access private property we use getter
+
+
+    private getTestBalance(): number {
+        return this._balance
+    }
+
+    get Test(): number {
+        return this.getTestBalance()
+    }
+
+    // to access private property we use getter  
 
     // getter
     get balance(): number {
