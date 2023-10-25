@@ -1,1 +1,6 @@
 go to this link https://github.com/coreybutler/nvm-windows/releases and download nvm-setup.exe
+
+nvm -v -> to check the version of the installed nvm(node version manager)
+nvm list -> to view all the installed node version.
+nvm install 20.16.1 -> to install specific node version.
+nvm use 18.16.1 -> to use the specific node version for the project.
